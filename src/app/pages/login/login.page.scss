@@ -1,0 +1,37 @@
+.container-login{
+    height: auto;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+             
+.btn-ing{
+    color: #000000;
+    margin-top: 15px;
+    margin-left: 15px;
+    --transition: .5s, color .10s;
+    --webkit-transition: .5s, color .10s;
+    --moz-transition: .5s, color .10s;
+    width: 120px;
+    
+}
+
+.btn-reg{
+    margin-left: 15px;
+    --transition: .5s, color .10s;
+    --webkit-transition: .5s, color .10s;
+    --moz-transition: .5s, color .10s;
+    width: 150px;
+}
+
+ion-loading {
+  --background: #e3edff;
+  --spinner-color: #1c6dff;
+
+  color: #1c6dff;
+}
+
+              

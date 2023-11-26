@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-buttons slot="end"> 
+      <ion-button (click)="cerrarSesion()"  expand="block"> 
+        <ion-icon name="power" size ="large"color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Hola {{usuario}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="ion-padding">
+    <ion-card-header>
+      <ion-card-title> {{nombre}} </ion-card-title>
+      <ion-card-subtitle> {{apellido}} </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ correo }}
+      <p> {{contrasena2}} </p>
+    </ion-card-content>
+  
+    <ion-button (click)="navegarRestablecer()" expand="fill" class="ion-padding"><ion-icon slot="end" name="create-outline"></ion-icon></ion-button>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-back-button slot="start" defaultHref="/"></ion-back-button>
+    <ion-title slot="start">¡Registrate!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card class="container-registro">
+    <ion-card-header>
+      <ion-card-title >Registro</ion-card-title>
+    </ion-card-header>
+    
+    <ion-item *ngIf="v_visible" color="warning" class="ion-margin-top ion-text-center" fadeOutDuration="400" >
+      <ion-label><strong> {{v_labelRegistro}} </strong></ion-label>
+    </ion-item>
+
+    <ion-item class="fondo input ion-margin-top" lines="none">
+      <ion-input label="Usuario" labelPlacement="floating" [(ngModel)]="mdl_usuario" clear-input="true" autofocus> </ion-input>
+    </ion-item>
+
+    
+    <ion-item class="fondo input ion-margin-top" lines="none">
+      <ion-input type="email"label="Correo" labelPlacement="floating" [(ngModel)]="mdl_correo"> </ion-input>
+    </ion-item>
+    
+    
+    <ion-item class="fondo input ion-margin-top" lines="none">
+      <ion-input label="Nombre" labelPlacement="floating" [(ngModel)]="mdl_nombre"> </ion-input>
+    </ion-item>
+    
+    <ion-item class="fondo input ion-margin-top" lines="none">
+      <ion-input label="Apellido" labelPlacement="floating" [(ngModel)]="mdl_apellido"> </ion-input>
+    </ion-item>
+    
+    <ion-item class="fondo input ion-margin-top" lines="none">
+      <ion-input type="{{ showPassword ? 'text' : 'password' }}" label="Contraseña" [(ngModel)]="mdl_contrasena" labelPlacement="floating"></ion-input>
+      <ion-buttons slot="end">
+        <ion-buttons (click)="togglePassword()">
+          <ion-icon [name]="showPassword ? 'eye-off' : 'eye'" size="small"></ion-icon>
+        </ion-buttons>
+      </ion-buttons>
+    </ion-item>
+    
+    
+    <ion-button (click)="almacenarUsuario()" expand="" class="btn-reg">Registrarme</ion-button>
+    
+    
+  </ion-card>
+</ion-content>

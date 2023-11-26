@@ -1,0 +1,17 @@
+.container-registro{
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+ion-button{
+    color: #000000;
+    margin-top: 15px;
+    margin-left: 15px;
+    --transition: .5s, color .10s;
+    --webkit-transition: .5s, color .10s;
+    --moz-transition: .5s, color .10s;
+}

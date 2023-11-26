@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="degradado">
+    <ion-title>App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" color="aliceblue">
+
+  <ion-card class="container-login">
+    <ion-card-header>
+      <ion-card-title >LOGIN</ion-card-title>
+    </ion-card-header>
+    <ion-item *ngIf="v_visible2" color="warning" class="ion-margin-top ion-text-center" fadeOutDuration="400" >
+      <ion-label><strong> {{v_labelusuario}} </strong></ion-label>
+    </ion-item>
+
+    <ion-item class="input ion-margin-top">
+      <ion-input [(ngModel)]="mdl_usuario" label="Usuario" labelPlacement="floating" autofocus ></ion-input>
+    </ion-item>
+
+    <ion-item class="input ion-margin-top">
+      <ion-input [(ngModel)]="mdl_contrasena" type="password" label="Contrasena" labelPlacement="floating" ></ion-input>
+    </ion-item>
+
+    <ion-button (click)="login()" expand="" class="btn-ing" color="secondary">Ingresar!</ion-button>
+    <h2> Crea una cuenta</h2>
+    <ion-button (click)="navegarRegistro()"expand="" class="btn-reg" color="light" >Registrate aquí</ion-button>
+  </ion-card>
+</ion-content>
